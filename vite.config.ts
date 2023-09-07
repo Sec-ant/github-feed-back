@@ -9,7 +9,12 @@ export default defineConfig({
         name: "GitHub Feed Back",
         icon: "https://github.githubassets.com/favicons/favicon.svg",
         namespace: "https://github.com/Sec-ant",
-        match: ["https://github.com/", "https://github.com/dashboard"],
+        match: [
+          "https://github.com/",
+          "https://github.com/dashboard",
+          "https://github.com/?*",
+          "https://github.com/dashboard*",
+        ],
         "run-at": "document-start",
       },
     }),

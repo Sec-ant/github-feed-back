@@ -41,7 +41,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "prepublishOnly": "npm run build",
-    "postpublish": "npm-mirror-sync",
+    "sync": "curl -X PUT 'https://registry-direct.npmmirror.com/github-feed-back/sync'",
+    "postpublish": "npm run sync",
     "ncu": "npx npm-check-updates -u",
     "postncu": "npm i"
   },
@@ -50,7 +51,6 @@
     "@typescript-eslint/parser": "^6.6.0",
     "eslint": "^8.48.0",
     "npm-check-updates": "^16.13.2",
-    "npm-mirror-sync": "^1.0.0",
     "prettier": "^3.0.3",
     "typescript": "^5.2.2",
     "vite": "^4.4.9",

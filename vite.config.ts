@@ -14,6 +14,10 @@ export default defineConfig({
           "https://github.com/?*",
           "https://github.com/dashboard*",
         ],
+        updateURL:
+          "https://registry.npmmirror.com/github-feed-back/latest/files/dist/github-feed-back.user.js",
+        downloadURL:
+          "https://registry.npmmirror.com/github-feed-back/latest/files/dist/github-feed-back.user.js",
         "run-at": "document-start",
       },
     }),

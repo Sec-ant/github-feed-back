@@ -2,7 +2,7 @@
 
 Bring my GitHub feed back.
 
-[GitHub just updated the feed](https://github.blog/changelog/2023-09-06-updates-to-your-github-feed/). This userscript helps you bring your old Github feed back.
+[GitHub just updated the feed](https://github.blog/changelog/2023-09-06-updates-to-your-github-feed/). This userscript helps you bring your old GitHub feed back.
 
 ## Install
 

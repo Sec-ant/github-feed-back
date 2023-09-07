@@ -2,7 +2,8 @@ interface IncludeFragment extends HTMLElement {
   src: string;
 }
 
-let found = 0;
+let isIncludeFragmentFound = false;
+let isFilterButtonFound = false;
 
 const observer = new MutationObserver((_, observer) => {
   const includeFragment = document.querySelector<IncludeFragment>(
@@ -10,16 +11,16 @@ const observer = new MutationObserver((_, observer) => {
   );
   if (includeFragment) {
     includeFragment.src = "/dashboard-feed";
-    ++found;
+    isIncludeFragmentFound = true;
   }
   const filterButton = document.querySelector(
     '[data-target="feed-container.feedTitle"] + div',
   );
   if (filterButton) {
     filterButton.remove();
-    ++found;
+    isFilterButtonFound = true;
   }
-  if (found > 1) {
+  if (isIncludeFragmentFound && isFilterButtonFound) {
     observer.disconnect();
   }
 });

@@ -2,7 +2,7 @@
   "name": "github-feed-back",
   "description": "Bring my GitHub feed back",
   "private": false,
-  "version": "0.0.6",
+  "version": "0.1.0",
   "type": "module",
   "files": [
     "./dist"

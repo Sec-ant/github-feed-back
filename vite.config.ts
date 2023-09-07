@@ -11,7 +11,6 @@ export default defineConfig({
         namespace: "https://github.com/Sec-ant",
         match: [
           "https://github.com/",
-          "https://github.com/dashboard",
           "https://github.com/?*",
           "https://github.com/dashboard*",
         ],

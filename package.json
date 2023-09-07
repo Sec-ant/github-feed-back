@@ -1,0 +1,58 @@
+{
+  "name": "github-feed-back",
+  "description": "Bring my GitHub feed back",
+  "private": false,
+  "version": "0.0.1",
+  "type": "module",
+  "files": [
+    "./dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sec-ant/github-feed-back"
+  },
+  "homepage": "https://github.com/Sec-ant/github-feed-back",
+  "bugs": {
+    "url": "https://github.com/Sec-ant/github-feed-back/issues",
+    "email": "zzwu@zju.edu.cn"
+  },
+  "keywords": [
+    "github",
+    "feed",
+    "userscript"
+  ],
+  "author": {
+    "name": "Ze-Zheng Wu"
+  },
+  "license": "MIT",
+  "config": {},
+  "scripts": {
+    "dev": "vite",
+    "lint": "eslint . --ext .ts",
+    "type-check": "tsc --noEmit --emitDeclarationOnly false",
+    "format": "prettier . --write",
+    "prebuild": "npm run lint && npm run type-check && npm run format",
+    "build": "vite build",
+    "postbuild": "tsc",
+    "preview": "vite preview",
+    "prepublishOnly": "npm run build",
+    "ncu": "npx npm-check-updates -u",
+    "postncu": "npm i"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
+    "eslint": "^8.48.0",
+    "npm-check-updates": "^16.13.2",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9",
+    "vite-plugin-monkey": "^3.5.0"
+  }
+}

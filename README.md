@@ -6,9 +6,11 @@ Bring my GitHub feed back.
 
 ## Install
 
-- First, install a userscript management browser extension: [Tampermonkey](https://www.tampermonkey.net/), [Violentmonkey](https://violentmonkey.github.io/), etc.
+1. First, install a userscript management browser extension: [Tampermonkey](https://www.tampermonkey.net/), [Violentmonkey](https://violentmonkey.github.io/), etc.
 
-- Install this script from [Greasy Fork](https://greasyfork.org/scripts/474720@latest) or [jsDelivr](https://fastly.jsdelivr.net/npm/github-feed-back@latest/dist/github-feed-back.user.js).
+2. Install this script from [Greasy Fork](https://greasyfork.org/scripts/474720@latest) or [npmmirror](https://registry.npmmirror.com/github-feed-back/latest/files/dist/github-feed-back.user.js).
+
+   You can also find it on [jsDelivr](https://fastly.jsdelivr.net/npm/github-feed-back@latest/dist/) or [UNKPG](https://unpkg.com/browse/github-feed-back@latest/dist/), however due to their cache strategies, you may have to manually switch to the latest version yourself.
 
 ## License
 

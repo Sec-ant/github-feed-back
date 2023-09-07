@@ -39,7 +39,6 @@
     "format": "prettier . --write",
     "prebuild": "npm run lint && npm run type-check && npm run format",
     "build": "vite build",
-    "postbuild": "tsc",
     "preview": "vite preview",
     "prepublishOnly": "npm run build",
     "postpublish": "npm-mirror-sync",

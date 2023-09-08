@@ -10,7 +10,9 @@ const observer = new MutationObserver((_, observer) => {
     '[data-target="feed-container.content"] > include-fragment',
   );
   if (includeFragment) {
-    includeFragment.src = "/dashboard-feed";
+    // setting includeFragment.src won't work sometimes:
+    // https://github.com/Sec-ant/github-feed-back/issues/2
+    includeFragment.setAttribute("src", "/dashboard-feed");
     isIncludeFragmentFound = true;
   }
   const filterButton = document.querySelector(

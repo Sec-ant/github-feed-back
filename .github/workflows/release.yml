@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - main
+  repository_dispatch:
+    types: [dependabot-merge]
   workflow_dispatch:
 
 permissions:

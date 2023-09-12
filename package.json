@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Sec-ant/github-feed-back"
+    "url": "git+https://github.com/Sec-ant/github-feed-back.git"
   },
   "homepage": "https://github.com/Sec-ant/github-feed-back",
   "bugs": {

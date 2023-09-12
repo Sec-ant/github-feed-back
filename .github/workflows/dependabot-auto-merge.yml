@@ -21,3 +21,7 @@ jobs:
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: Dispatch Event
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          event-type: dependabot-merge

@@ -32,6 +32,10 @@
   },
   "license": "MIT",
   "config": {},
+  "publishConfig": {
+    "provenance": true,
+    "access": "public"
+  },
   "scripts": {
     "dev": "vite",
     "lint": "eslint . --ext .ts",
@@ -47,11 +51,15 @@
     "postncu": "npm i"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@semantic-release/git": "^10.0.1",
     "@typescript-eslint/eslint-plugin": "^6.6.0",
     "@typescript-eslint/parser": "^6.6.0",
     "eslint": "^8.48.0",
     "npm-check-updates": "^16.13.2",
     "prettier": "^3.0.3",
+    "semantic-release": "^21.1.1",
     "typescript": "^5.2.2",
     "vite": "^4.4.9",
     "vite-plugin-monkey": "^3.5.0"

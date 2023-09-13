@@ -1,10 +1,14 @@
 import { defineConfig } from "vite";
-import monkey from "vite-plugin-monkey";
+import monkey, { cdn } from "vite-plugin-monkey";
+import { name } from "./package.json";
 
 export default defineConfig({
   plugins: [
     monkey({
       entry: "src/index.ts",
+      build: {
+        metaFileName: true,
+      },
       userscript: {
         name: "GitHub Feed Back",
         icon: "https://github.githubassets.com/favicons/favicon.svg",
@@ -14,10 +18,14 @@ export default defineConfig({
           "https://github.com/?*",
           "https://github.com/dashboard*",
         ],
-        updateURL:
-          "https://registry.npmmirror.com/github-feed-back/latest/files/dist/github-feed-back.user.js",
-        downloadURL:
-          "https://registry.npmmirror.com/github-feed-back/latest/files/dist/github-feed-back.user.js",
+        downloadURL: cdn.npmmirror(undefined, `dist/${name}.user.js`)[1](
+          "latest",
+          name,
+        ),
+        updateURL: cdn.npmmirror(undefined, `dist/${name}.meta.js`)[1](
+          "latest",
+          name,
+        ),
         "run-at": "document-start",
       },
     }),
